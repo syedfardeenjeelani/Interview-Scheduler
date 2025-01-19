@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useInterviewStore, Interview } from "../store";
+import { useInterviewStore } from "../store";
 import { toast } from "react-toastify";
 
 const DashboardContainer = styled.div`
