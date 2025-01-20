@@ -170,10 +170,7 @@ const Dashboard = () => {
         <HeaderText>
           <h1>Interview Dashboard</h1>
           <p>Manage and track your upcoming interviews</p>
-        </HeaderText>
-        <Link to="/new">
-          <PrimaryButton>New Interview</PrimaryButton>
-        </Link>
+        </HeaderText> 
       </Header>
 
       <Card>
