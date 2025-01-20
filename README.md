@@ -1,50 +1,93 @@
-# React + TypeScript + Vite
+ 
+# Interview Scheduler
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A functional React application designed to help HR professionals and recruiters efficiently schedule, manage, and view interviews.  
 
-Currently, two official plugins are available:
+## Features  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Core Features  
+1. **Interview Scheduling**  
+    
+   - Schedule interviews by selecting:  
+     - Candidate name.  
+     - Interviewer name.  
+     - Date and time slot.  
+     - Interview type (Technical, HR, Behavioral, etc.).     
 
-## Expanding the ESLint configuration
+2. **Interview Dashboard**  
+   - Calendar or timeline view of all scheduled interviews.  
+   - Filtering options by:  
+     - Date.  
+     - Interviewer.  
+     - Candidate.  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. **Rescheduling/Editing Interviews**  
+   - Update interview details (e.g., time, interviewer).  
+   - Persist changes to the data source.  
 
-- Configure the top-level `parserOptions` property like this:
+4. **Deleting Interviews**  
+   - Delete scheduled interviews with confirmation prompts.  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+5. **Notifications**  
+   - Success or error messages displayed on scheduling, updating, or deleting interviews.  
+
+---
+
+## Technical Stack  
+
+- **Frontend**: React (functional components, hooks).  
+- **State Management**:Zustand.  
+- **Routing**: React Router.  
+- **Styling**: CSS-in-JS (styled-components)  .  
+- **Data Persistence**: LocalStorage  
+- **Responsive Design**: Optimized for desktop and mobile devices.  
+
+---
+
+## Installation and Setup  
+
+1. **Clone the repository**  
+   ```bash  
+   git clone https://github.com/syedfardeenjeelani/Interview-Scheduler.git  
+   cd interview-scheduler  
+   ```  
+
+2. **Install dependencies**  
+   ```bash  
+   npm install  
+   ```  
+ 
+ 
+
+## Key Functionalities  
+
+### Scheduling an Interview  
+- Select a candidate, interviewer, date, and time slot.  
+- Choose an interview type (Technical, HR, Behavioral).   
+
+### Dashboard View  
+- Visualize scheduled interviews in a calendar or timeline.  
+- Filter interviews by date, interviewer, or candidate.  
+
+### Rescheduling/Editing  
+- Modify existing interview details.  
+- Persist changes without losing existing data.  
+
+### Deleting Interviews  
+- Confirm before deleting an interview.  
+
+### Notifications  
+- Show appropriate success or error messages for actions.   
+
+## Contributions  
+
+Feel free to fork this repository and submit pull requests for any enhancements or bug fixes.  
+
+---
+
+## License  
+
+This project is licensed under the MIT License.  
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This README provides an organized structure for your project and ensures all key details are documented for ease of understanding.
