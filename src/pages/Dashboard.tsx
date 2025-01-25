@@ -11,21 +11,32 @@ const PageContainer = styled.div`
 `;
 
 const Header = styled.div`
+  background: linear-gradient(90deg, #007bff, #6610f2);
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
+  padding: 25px;
+  transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(90deg, #6610f2, #007bff);
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const HeaderText = styled.div`
   h1 {
+    color: white;
     font-size: 24px;
     font-weight: bold;
     margin: 0;
   }
 
   p {
-    color: #666;
+    color: #fff;
     margin: 4px 0 0 0;
   }
 `;
@@ -55,6 +66,9 @@ const Input = styled.input`
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+  }
+  &:hover {
+    border: 2px solid #007bff;
   }
 `;
 
@@ -170,7 +184,7 @@ const Dashboard = () => {
         <HeaderText>
           <h1>Interview Dashboard</h1>
           <p>Manage and track your upcoming interviews</p>
-        </HeaderText> 
+        </HeaderText>
       </Header>
 
       <Card>
