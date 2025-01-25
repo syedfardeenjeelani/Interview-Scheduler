@@ -32,7 +32,9 @@ const StyledLink = styled(Link)`
 const Header: React.FC = () => {
   return (
     <HeaderContainer>
-      <Logo>Interview Scheduler</Logo>
+      <h1 className="font-bold text-2xl text-blue-700 hover:underline">
+        Interview Scheduler
+      </h1>
       <Nav>
         <StyledLink to="/">Dashboard</StyledLink>
         <StyledLink to="/schedule">Schedule Interview</StyledLink>
